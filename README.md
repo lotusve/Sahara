@@ -2,7 +2,7 @@
 a project base on mvp, rxjava, retrofit, dagger
 
 # LICENSE
-    Copyright 2015 The RxAndroid authors
+    Copyright 2015 The Sahara authors
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
