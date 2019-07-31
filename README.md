@@ -1,5 +1,5 @@
 # Sahara
-a project base on mvp, rxjava, retrofit, dagger
+a project base on mvp, rxjava, retrofit and dagger.
 
 # LICENSE
     Copyright 2019 The Sahara authors
