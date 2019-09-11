@@ -10,4 +10,11 @@
         android:layout_height="match_parent"
         android:text="@string/home_fragment" />
 
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:text="Submit" />
+
 </FrameLayout>
