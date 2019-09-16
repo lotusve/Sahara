@@ -19,6 +19,9 @@ import org.spacelab.sahara.R;
  * create an instance of this fragment.
  */
 public class NotificationsFragment extends Fragment {
+
+    public static final int FRAGMENT_NOTIFICATIONS = 2;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -71,7 +74,7 @@ public class NotificationsFragment extends Fragment {
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+            mListener.onFragmentInteraction(FRAGMENT_NOTIFICATIONS, uri);
         }
     }
 
@@ -104,6 +107,6 @@ public class NotificationsFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        void onFragmentInteraction(int fragmentId, Uri uri);
     }
 }

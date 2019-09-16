@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 
         initViews();
 
-        updateFragment(0);
+        updateFragment(HomeFragment.FRAGMENT_HOME);
 
     }
 
@@ -36,13 +36,13 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    updateFragment(0);
+                    updateFragment(HomeFragment.FRAGMENT_HOME);
                     return true;
                 case R.id.navigation_dashboard:
-                    updateFragment(1);
+                    updateFragment(DashboardFragment.FRAGMENT_DASHBOARD);
                     return true;
                 case R.id.navigation_notifications:
-                    updateFragment(2);
+                    updateFragment(NotificationsFragment.FRAGMENT_NOTIFICATIONS);
                     return true;
             }
             return false;
@@ -51,23 +51,22 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 
     private void updateFragment(int type) {
         switch (type) {
-            case 0:
+            case HomeFragment.FRAGMENT_HOME:
                 getSupportFragmentManager().beginTransaction().replace(R.id.content_fragment, HomeFragment.newInstance("p1", "p2")).commit();
                 break;
-            case 1:
+            case DashboardFragment.FRAGMENT_DASHBOARD:
                 getSupportFragmentManager().beginTransaction().replace(R.id.content_fragment, DashboardFragment.newInstance("p1", "p2")).commit();
                 break;
-            case 2:
+            case NotificationsFragment.FRAGMENT_NOTIFICATIONS:
                 getSupportFragmentManager().beginTransaction().replace(R.id.content_fragment, NotificationsFragment.newInstance("p1", "p2")).commit();
                 break;
             default:
-                getSupportFragmentManager().beginTransaction().replace(R.id.content_fragment, HomeFragment.newInstance("p1", "p2")).commit();
                 break;
         }
     }
 
     @Override
-    public void onFragmentInteraction(Uri uri) {
+    public void onFragmentInteraction(int fragmentId, Uri uri) {
 
     }
 
