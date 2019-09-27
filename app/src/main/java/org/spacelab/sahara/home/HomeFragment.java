@@ -16,7 +16,7 @@ import org.spacelab.sahara.R;
 
 public class HomeFragment extends Fragment {
 
-    private static final String TAG = "Sahara_HomeFragment";
+    private static final String TAG = "Sahara-" + HomeFragment.class.getSimpleName();
 
     public static final int FRAGMENT_HOME = 0;
 
