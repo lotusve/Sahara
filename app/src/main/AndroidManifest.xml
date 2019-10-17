@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".TwoActivity"
+        <activity android:name=".appbarlayout.TwoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             />
     </application>
