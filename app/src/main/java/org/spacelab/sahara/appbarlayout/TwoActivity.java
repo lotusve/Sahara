@@ -1,6 +1,7 @@
 package org.spacelab.sahara.appbarlayout;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -48,6 +49,7 @@ public class TwoActivity extends AppCompatActivity {
             }
         });
 
+        swipeRefreshLayout.setColorSchemeColors(Color.parseColor("#FF0000"), Color.parseColor("#00FF00")); // 设置下拉刷新时，刷新进度按钮的颜色
 
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -61,7 +63,7 @@ public class TwoActivity extends AppCompatActivity {
 
         dataList.clear();
 
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 20; i++) {
             dataList.add(i);
         }
 
