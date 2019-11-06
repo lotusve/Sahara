@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import org.spacelab.sahara.R;
-import org.spacelab.sahara.appbarlayout.TwoActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -73,8 +72,6 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(HomeFragment.this.getActivity(), "Button clicked.", Toast.LENGTH_LONG).show();
-
-                startActivity(new Intent(HomeFragment.this.getActivity(), TwoActivity.class));
 
             }
         });
